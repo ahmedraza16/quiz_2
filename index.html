@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>First API</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>
+            My First API
+        </h1>
+
+        <div class="popup-btn">
+
+            <button  class="btn btn-info">Add Recipe</button>
+        </div>
+        
+    
+        <div class="popup-container">
+    
+            <div class="popup-backdrop" name="backdrop"></div>
+            <div class="model" name="model">
+                <button class="close" name="close">❌</button>
+    
+                <h2> Add Recipe </h2>
+
+                <form>
+                    <div class="mb-3">
+                      <label for="title" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="body" class="form-label">Recipe</label>
+                      <textarea class="form-control" aria-label="With textarea" id="body"></textarea>
+                    </div>
+    
+                    <button type="submit" class="btn btn-primary" id="addBtn">Submit</button>
+                  </form>
+    
+                
+    
+            </div>
+    
+        </div>
+
+
+        <!-- Update Modal -->
+        <!-- Modal -->
+        <div class="modal fade wid" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"> Update Title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                ❌
+                            </button>
+                    </div>
+                    <div class="modal-body">
+                        Update Body
+                        <form>
+                            <input id="updateId" type="hidden">
+                            <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" id="updateTitle" class="form-control" id="title" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                              <label for="body" class="form-label">Recipe</label>
+                              <textarea class="form-control" aria-label="With textarea" id="updateBody"></textarea>
+                            </div>
+            
+                            
+                          </form>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id="updateSave" type="button" class="btn btn-primary">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                    <div class="modal-body">
+                        Body
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+<div id="recipes" >
+            <h4>
+             Loading...
+            </h4>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
